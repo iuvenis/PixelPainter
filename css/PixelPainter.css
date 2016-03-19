@@ -1,0 +1,37 @@
+#colorOptions{
+
+}
+
+.row1, .row2{
+  height: 50px;
+  width: 50px;
+    border-width: thin;
+  border-style: solid;
+  display: inline-block;
+border-width: thin;
+margin: -2px;
+margin-bottom:1px;
+}
+
+#canvas{
+ height: 400px;
+
+}
+
+.canvasBlocks{
+   border: 1px solid #000000 ;
+   display: flex;
+   flex-wrap: wrap;
+   align-content:flex-end;
+  border-width: thin;
+  border-style: solid;
+  width:40px;
+  height: 40px;
+  align-content: center;
+
+}
+
+#cavasRow1{
+   left: 0;
+   position: relative;
+}
