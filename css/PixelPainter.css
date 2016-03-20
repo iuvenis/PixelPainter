@@ -21,6 +21,7 @@
   -webkit-column-count: 2;
   margin-left: 4px;
   -webkit-column-gap: 0px;
+
 }
 
 #chosenColor{
@@ -28,25 +29,85 @@
   height: 61px;
   border: 1px solid black;
   position: fixed;
-  top: 380;
+  top: 420;
   left: 12;
 }
 
 #erase {
     position: fixed;
-    top: 450;
+    top: 490;
     left: 12;
+    vertical-align: center;
 
 }
 
 #clear {
   position: fixed;
-  top: 470;
+  top: 510;
   left: 12;
 }
 
 #refreshColors {
   position: fixed;
-  top: 490;
-  left: 12;  
+  top: 530;
+  left: 12;
+}
+
+h2{
+  font-family: 'VT323', font-weight: 400;
+}
+
+#bob {
+  position: absolute;
+    bottom: 0;
+    right:0;
+    z-index: 9;
+    align-self: flex-end;
+    max-height: 400px;
+    max-width: auto;
+    animation: fadein 5s;
+    -moz-animation: fadein 5s; /* Firefox */
+    -webkit-animation: fadein 5s; /* Safari and Chrome */
+    -o-animation: fadein 5s; /* Opera */
+
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+img{
+       -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-user-drag: none;
 }
