@@ -35,7 +35,7 @@
 
 #erase {
     position: fixed;
-    top: 490;
+    top: 520;
     left: 12;
     vertical-align: center;
 
@@ -43,15 +43,22 @@
 
 #clear {
   position: fixed;
-  top: 510;
+  top: 490;
   left: 12;
 }
 
 #refreshColors {
   position: fixed;
-  top: 530;
+  top: 550;
   left: 12;
 }
+
+#removeGridlines {
+  position: fixed;
+  top: 580;
+  left: 12;
+}
+
 
 h2{
   font-family: 'VT323', font-weight: 400;
@@ -63,7 +70,7 @@ h2{
     right:0;
     z-index: 9;
     align-self: flex-end;
-    max-height: 400px;
+    max-height: 350px;
     max-width: auto;
     animation: fadein 5s;
     -moz-animation: fadein 5s; /* Firefox */

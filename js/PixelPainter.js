@@ -57,9 +57,9 @@ function clear () {
 
 document.getElementById('refreshColors').addEventListener('click', setRandomColors);
 
-document.getElementById('removeGridLines').addEventListener('click', removeGridLines)
+document.getElementById('removeGridlines').addEventListener('click', removeGridlines)
 
- function removeGridLines () {
+ function removeGridlines () {
 
   var blocks = document.getElementsByClassName('block');
   
@@ -69,12 +69,14 @@ document.getElementById('removeGridLines').addEventListener('click', removeGridL
       blocks[i].style.border = 'none';
     }
     canvasGrid.style.border = 'solid';
+    document.getElementById('removeGridlines').innerHTML = 'Use Gridlines';
   }
   else {
     for (var i = 0; i < blocks.length; i++) {
       blocks[i].style.border = '1px solid black';
     }
     canvasGrid.style.border = 'none';
+    document.getElementById('removeGridlines').innerHTML = 'Remove Gridlines';
   }
 
  }
