@@ -44,3 +44,9 @@
   top: 470;
   left: 12;
 }
+
+#refreshColors {
+  position: fixed;
+  top: 490;
+  left: 12;  
+}
