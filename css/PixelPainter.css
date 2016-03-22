@@ -1,3 +1,8 @@
+body {
+  background-image: url('https://s-media-cache-ak0.pinimg.com/736x/b9/cc/c1/b9ccc1bbbe6a5e205ce3a0bbd8637c7e.jpg');
+  background-size: cover;
+}
+
 .block {
   width: 20px;
   height: 20px;
@@ -24,13 +29,19 @@
 
 }
 
+button {
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
 #chosenColor{
-    width: 61px;
+  width: 61px;
   height: 61px;
   border: 1px solid black;
   position: fixed;
   top: 420;
   left: 12;
+  background-color: #ffffff;
 }
 
 #erase {
