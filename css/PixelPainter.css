@@ -1,10 +1,10 @@
 body {
-
   background-image: url('https://s-media-cache-ak0.pinimg.com/736x/b9/cc/c1/b9ccc1bbbe6a5e205ce3a0bbd8637c7e.jpg');
   background-size: cover;
 }
 
 .block {
+
   width: 20px;
   height: 20px;
   border: 1px solid black;
@@ -32,7 +32,6 @@ body {
   -webkit-column-count: 2;
   margin-left: 4px;
   -webkit-column-gap: 0px;
-
 }
 
 button {
@@ -40,9 +39,20 @@ button {
   background-color: #ffffff;
 }
 
+
 #leftContainer{
 
   max-width: 166px;
+}
+
+#canvasContainer {
+  max-width: 880px;
+  max-height: 440px;
+}
+
+#canvasGrid {
+  width: 880px;
+  height: 440px;
 }
 
 
@@ -53,8 +63,8 @@ button {
   position: inherit;
   margin: 4px;
   margin-top: 10px;
-
 }
+
 button {
   border-radius: 12px;
   vertical-align: top;
@@ -68,49 +78,22 @@ button {
 }
 
 #clear {
-padding-top: 10px;
-margin-right: 40px;
-margin-top: 5px;
+  padding-top: 10px;
+  margin-right: 40px;
+  margin-top: 5px;
 }
 
 #refreshColors {
-padding-top: 10px;
-margin-top: 5px;
-vertical-align: center;
+  padding-top: 10px;
+  margin-top: 5px;
+  vertical-align: center;
 }
 
 #removeGridlines {
-padding-top: 5px;
-margin-top: 5px;
+  padding-top: 5px;
+  margin-top: 5px;
 vertical-align: center;
 }
-
-.favColor{
-  width: 30px;
-  height: 30px;
-  border: 1px solid black;
-  background-color: white;
-  display: inline-block;
-}
-
-#colorNotification {
-  display: none;
-  font-family: 'VT323', ;
-  font-size: 12px;
-  padding: 5px;
-  text-transform: uppercase;
-}
-
-#favoriteColors:hover #colorNotification {
-display: block;
-vertical-align: bottom;
-}
-
-#favoriteColors{
-  margin-top: 21px;
-  margin-left: 7px;
-}
-
 
 
 h2{
@@ -133,11 +116,22 @@ h2{
 @-moz-keyframes fadein { from { opacity:0; } to { opacity:1;}}
 @-webkit-keyframes fadein { from { opacity:0; } to { opacity:1;}}
 @-o-keyframes fadein { from { opacity:0; } to { opacity:1;}}
-
 img{
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
     -webkit-user-drag: none;
+}
+
+
+@media screen and (max-width: 600px) {
+ 
+ body {
+  background-image: url('http://www.allergistlafayette.com/site/wp-content/uploads/2014/08/Bermuda-grass-allergy1.jpg');
+ }
+
+ #bob {
+  display: none;
+ } 
 }

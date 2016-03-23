@@ -3,11 +3,18 @@ var change = false;
 
 var pixelPainter = function () {
   var colors = [];
+  var setColors = ['black', 'blue', 'red', 'green', 'yellow'];
   var hexArray = ["a","b","c","d","e","f","1","2","3","4","5","6","7","8","0","9"];
   var hexColor = "#";
 
   function generateColor(){
     colors = [];
+
+    setColors.forEach(function (color) {
+
+      colors.push(color);
+    })
+
     while(colors.length !== 20){
       for (i = 0; i < 6; i++){
         hexColor = hexColor.concat(hexArray[Math.floor(Math.random()*hexArray.length)]);
@@ -68,6 +75,8 @@ var pixelPainter = function () {
         blocks[i].style.border = 'none';
       }
       canvasGrid.style.border = 'solid';
+      canvasGrid.style.width = '800px';
+      canvasGrid.style.height = '400px';
       document.getElementById('removeGridlines').innerHTML = 'Use Gridlines ';
       document.getElementById('removeGridlines').appendChild(gridlineImg);
     }
@@ -115,18 +124,7 @@ var pixelPainter = function () {
     }
   }
 
-  function favoriteColor() {
-
-    for (var i = 0; i < 27; i++) {
-
-      var row = document.createElement('div');
-      row.className = 'favColor';
-
-      favoriteColors.appendChild(row);
-    }
-  }
-
-
+  
 
 
   return {
@@ -141,8 +139,7 @@ var pixelPainter = function () {
     canvasMaker     : canvasMaker,
     setPick         : setPick,
     mouseUp         : mouseUp,
-    mouseMove       : mouseMove,
-    favoriteColor  : favoriteColor
+    mouseMove       : mouseMove
   };
 };
 
@@ -151,7 +148,6 @@ var canvasGrid = document.getElementById('canvasGrid');
   canvasGrid.style.backgroundColor = '#ffffff';
   canvasGrid.addEventListener('mousedown', function () {
     pixelPainter().setPick();
-    console.log('clicked');
   });
 
   canvasGrid.addEventListener('mouseup', function () {
@@ -184,8 +180,6 @@ document.getElementById('removeGridlines').addEventListener('click', function ()
   pixelPainter().removeGridlines();
 });
 
-favoriteColors= document.getElementById('favoriteColors');
 
-pixelPainter().favoriteColor();
 pixelPainter().canvasMaker();
 pixelPainter().colorPalette();
