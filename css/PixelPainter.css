@@ -3,11 +3,20 @@ body {
   background-size: cover;
 }
 
+#leftContainer {
+  max-width: 150px;
+}
+
+#canvasGrid {
+  /*background-color: red;*/
+}
+
 .block {
   width: 20px;
   height: 20px;
   border: 1px solid black;
   display: inline-block;
+  /*background-color: ;*/
 }
 
 .colorRow {
@@ -22,10 +31,10 @@ body {
 }
 
 #colorGrid {
-  margin-right: 100px;
+  max-width: 83px;
   -webkit-column-count: 2;
-  margin-left: 4px;
   -webkit-column-gap: 0px;
+  margin-right: 88px;
 
 }
 
@@ -38,36 +47,36 @@ button {
   width: 61px;
   height: 61px;
   border: 1px solid black;
-  position: fixed;
-  top: 420;
-  left: 12;
+  /*position: fixed;*/
+  /*top: 420;
+  left: 12;*/
   background-color: #ffffff;
 }
 
 #erase {
-    position: fixed;
+    /*position: fixed;
     top: 520;
-    left: 12;
-    vertical-align: center;
+    left: 12;*/
+    /*vertical-align: center;*/
 
 }
 
 #clear {
-  position: fixed;
-  top: 490;
-  left: 12;
+/*   position: fixed;
+top: 490;
+left: 12; */
 }
 
 #refreshColors {
-  position: fixed;
+  /*position: fixed;
   top: 550;
-  left: 12;
+  left: 12;*/
 }
 
 #removeGridlines {
-  position: fixed;
+ /* position: fixed;
   top: 580;
-  left: 12;
+  left: 12;*/
 }
 
 
