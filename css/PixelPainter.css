@@ -1,4 +1,5 @@
-body{
+body {
+
   background-image: url('https://s-media-cache-ak0.pinimg.com/736x/b9/cc/c1/b9ccc1bbbe6a5e205ce3a0bbd8637c7e.jpg');
   background-size: cover;
 }
@@ -34,10 +35,16 @@ body{
 
 }
 
+button {
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
 #chosenColor{
   width: 61px;
   height: 61px;
   border: 1px solid black;
+<<<<<<< HEAD
   position: inherit;
   margin: 4px;
   margin-top: 10px;
@@ -45,6 +52,11 @@ body{
 }
 button {
   border-radius: 12px;
+=======
+  position: fixed;
+  top: 420;
+  left: 12;
+>>>>>>> d1272c88ad22b095e9bf18ca4751d1d8646deaa2
   background-color: #ffffff;
 }
 
