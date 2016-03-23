@@ -85,6 +85,8 @@ var pixelPainter = function () {
         blocks[m].style.border = '1px solid black';
       }
       canvasGrid.style.border = 'none';
+      canvasGrid.style.height = '440px';
+      canvasGrid.style.width = '880px'
       document.getElementById('removeGridlines').innerHTML = 'Remove Gridlines ';
       document.getElementById('removeGridlines').appendChild(gridlineImg);
     }
