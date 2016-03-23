@@ -40,11 +40,16 @@ button {
   background-color: #ffffff;
 }
 
+#leftContainer{
+
+  max-width: 166px;
+}
+
+
 #chosenColor{
   width: 61px;
   height: 61px;
   border: 1px solid black;
-<<<<<<< HEAD
   position: inherit;
   margin: 4px;
   margin-top: 10px;
@@ -52,39 +57,60 @@ button {
 }
 button {
   border-radius: 12px;
-=======
-  position: fixed;
-  top: 420;
-  left: 12;
->>>>>>> d1272c88ad22b095e9bf18ca4751d1d8646deaa2
-  background-color: #ffffff;
+  vertical-align: top;
 }
 
 #erase {
   padding-top: 10px;
   vertical-align: center;
+  margin-top: 5px;
 
 }
 
 #clear {
 padding-top: 10px;
-margin-right: 20px;
-vertical-align: center;
-margin-top: 10px;
+margin-right: 40px;
+margin-top: 5px;
 }
 
 #refreshColors {
-padding-top: 5px;
-margin-top: 10px;
+padding-top: 10px;
+margin-top: 5px;
 vertical-align: center;
-
 }
 
 #removeGridlines {
 padding-top: 5px;
-margin-top: 10px;
+margin-top: 5px;
 vertical-align: center;
 }
+
+.favColor{
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  background-color: white;
+  display: inline-block;
+}
+
+#colorNotification {
+  display: none;
+  font-family: 'VT323', ;
+  font-size: 12px;
+  padding: 5px;
+  text-transform: uppercase;
+}
+
+#favoriteColors:hover #colorNotification {
+display: block;
+vertical-align: bottom;
+}
+
+#favoriteColors{
+  margin-top: 21px;
+  margin-left: 7px;
+}
+
 
 
 h2{

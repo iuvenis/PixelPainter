@@ -15,7 +15,7 @@ var pixelPainter = function () {
       colors.push(hexColor);
       hexColor = '#';
     }
-  };
+  }
 
   function colorPalette () {
     // Column Builder
@@ -50,20 +50,20 @@ var pixelPainter = function () {
   function clear () {
 
     var blocks = document.getElementsByClassName('block');
-​
+
     for(var i = 0; i < blocks.length; i++) {
       blocks[i].style.backgroundColor = 'white';
     }
   }
-​
+
   function removeGridlines () {
-​
+
     var blocks = document.getElementsByClassName('block');
     var gridlineImg = document.createElement('img');
     gridlineImg.src = 'http://icons.iconarchive.com/icons/fatcow/farm-fresh/16/grid-icon.png';
-​
+
     if (blocks[0].style.border !== 'none'){
-​
+
       for (var i = 0; i < blocks.length; i++) {
         blocks[i].style.border = 'none';
       }
@@ -72,22 +72,22 @@ var pixelPainter = function () {
       document.getElementById('removeGridlines').appendChild(gridlineImg);
     }
     else {
-      for (var i = 0; i < blocks.length; i++) {
-        blocks[i].style.border = '1px solid black';
+      for ( var m = 0; m < blocks.length; m++) {
+        blocks[m].style.border = '1px solid black';
       }
       canvasGrid.style.border = 'none';
       document.getElementById('removeGridlines').innerHTML = 'Remove Gridlines ';
       document.getElementById('removeGridlines').appendChild(gridlineImg);
     }
   }
-​
+
   function canvasMaker() {
-​
+
     for (var i = 0; i < 20; i++) {
-​
+
       var row = document.createElement('div');
       row.className = 'row';
-​
+
       for (var k = 0; k < 40; k++) {
         var block = document.createElement('div');
         block.className = 'block';
@@ -96,7 +96,7 @@ var pixelPainter = function () {
       canvasGrid.appendChild(row);
     }
   }
-​
+
   function setPick(){
     if (event.target.className === 'block'){
       event.target.style.backgroundColor = currentColor;
@@ -114,60 +114,78 @@ var pixelPainter = function () {
       event.target.style.backgroundColor = currentColor;
     }
   }
-​
-  return {
-​
-    generateColor : generateColor,
-    colorPalette : colorPalette,
-    setRandomColors : setRandomColors,
-    colorPick : colorPick,
-    erase : erase,
-    clear: clear,
-    removeGridlines : removeGridlines,
-    canvasMaker : canvasMaker,
-    setPick : setPick,
-    mouseUp : mouseUp,
-    mouseMove : mouseMove
+
+  function favoriteColor() {
+
+    for (var i = 0; i < 27; i++) {
+
+      var row = document.createElement('div');
+      row.className = 'favColor';
+
+      favoriteColors.appendChild(row);
+    }
   }
-}
-​
-​
+
+
+
+
+  return {
+
+    generateColor   : generateColor,
+    colorPalette    : colorPalette,
+    setRandomColors : setRandomColors,
+    colorPick       : colorPick,
+    erase           : erase,
+    clear           : clear,
+    removeGridlines : removeGridlines,
+    canvasMaker     : canvasMaker,
+    setPick         : setPick,
+    mouseUp         : mouseUp,
+    mouseMove       : mouseMove,
+    favoriteColor  : favoriteColor
+  };
+};
+
+
 var canvasGrid = document.getElementById('canvasGrid');
   canvasGrid.style.backgroundColor = '#ffffff';
   canvasGrid.addEventListener('mousedown', function () {
-    pixelPainter().setPick()
+    pixelPainter().setPick();
     console.log('clicked');
   });
 
   canvasGrid.addEventListener('mouseup', function () {
-    pixelPainter().mouseUp()
+    pixelPainter().mouseUp();
   });
 
   canvasGrid.addEventListener('mousemove', function () {
-    pixelPainter().mouseMove()
+    pixelPainter().mouseMove();
   });
-​
+
 var colorGrid  = document.getElementById('colorGrid');
   colorGrid.addEventListener('click', function () {
-    pixelPainter().colorPick()
+    pixelPainter().colorPick();
   });
-​
-​
+
+
 document.getElementById('erase').addEventListener('click', function () {
   pixelPainter().erase();
 });
-​
+
 document.getElementById('clear').addEventListener('click', function () {
-  pixelPainter().clear()
+  pixelPainter().clear();
 });
-​
+
 document.getElementById('refreshColors').addEventListener('click', function () {
-  pixelPainter().setRandomColors()
+  pixelPainter().setRandomColors();
 });
-​
+
 document.getElementById('removeGridlines').addEventListener('click', function () {
-  pixelPainter().removeGridlines()
+  pixelPainter().removeGridlines();
 });
-​
+
+favoriteColors= document.getElementById('favoriteColors');
+
+pixelPainter().favoriteColor();
 pixelPainter().canvasMaker();
 pixelPainter().colorPalette();
