@@ -13,7 +13,7 @@ function generateColor(){
     colors.push(hexColor);
     hexColor = '#';
   }
-};
+}
 
 var currentColor;
 var change = false;
@@ -38,6 +38,8 @@ function setRandomColors () {
   }
 }
 
+
+
 document.getElementById('colorGrid').addEventListener('click', colorPick);
 function colorPick(colorGrid){
   currentColor = event.target.style.backgroundColor;
@@ -52,17 +54,20 @@ function erase () {
 
 document.getElementById('clear').addEventListener('click', clear);
 function clear () {
-  location.reload();
-}
+    var blocks = document.getElementsByClassName('block');
+    for(var i = 0; i < blocks.length; i++) {
+      blocks[i].style.backgroundColor = 'white';
+    }
+  }
 
 document.getElementById('refreshColors').addEventListener('click', setRandomColors);
 
-document.getElementById('removeGridlines').addEventListener('click', removeGridlines)
+document.getElementById('removeGridlines').addEventListener('click', removeGridlines);
 
  function removeGridlines () {
 
   var blocks = document.getElementsByClassName('block');
-  
+
   if (blocks[0].style.border !== 'none'){
 
     for (var i = 0; i < blocks.length; i++) {

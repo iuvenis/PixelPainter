@@ -1,8 +1,14 @@
+body{
+  background-image: url('https://s-media-cache-ak0.pinimg.com/736x/b9/cc/c1/b9ccc1bbbe6a5e205ce3a0bbd8637c7e.jpg');
+  background-size: cover;
+}
+
 .block {
   width: 20px;
   height: 20px;
   border: 1px solid black;
   display: inline-block;
+  background-color: white;
 }
 
 .colorRow {
@@ -13,7 +19,11 @@
 
 #gridContainer {
   display: flex;
+}
 
+#subGrid{
+ vertical-align: bottom;
+ max-width: 167px;
 }
 
 #colorGrid {
@@ -25,38 +35,43 @@
 }
 
 #chosenColor{
-    width: 61px;
+  width: 61px;
   height: 61px;
   border: 1px solid black;
-  position: fixed;
-  top: 420;
-  left: 12;
+  position: inherit;
+  margin: 4px;
+  margin-top: 10px;
+
+}
+button {
+  border-radius: 12px;
+  background-color: #ffffff;
 }
 
 #erase {
-    position: fixed;
-    top: 520;
-    left: 12;
-    vertical-align: center;
+  padding-top: 10px;
+  vertical-align: center;
 
 }
 
 #clear {
-  position: fixed;
-  top: 490;
-  left: 12;
+padding-top: 10px;
+margin-right: 20px;
+vertical-align: center;
+margin-top: 10px;
 }
 
 #refreshColors {
-  position: fixed;
-  top: 550;
-  left: 12;
+padding-top: 5px;
+margin-top: 10px;
+vertical-align: center;
+
 }
 
 #removeGridlines {
-  position: fixed;
-  top: 580;
-  left: 12;
+padding-top: 5px;
+margin-top: 10px;
+vertical-align: center;
 }
 
 
@@ -64,57 +79,27 @@ h2{
   font-family: 'VT323', font-weight: 400;
 }
 
-#bob {
+#bob{
   position: absolute;
-    bottom: 0;
-    right:0;
-    z-index: 9;
-    align-self: flex-end;
-    max-height: 350px;
-    max-width: auto;
-    animation: fadein 5s;
-    -moz-animation: fadein 5s; /* Firefox */
-    -webkit-animation: fadein 5s; /* Safari and Chrome */
-    -o-animation: fadein 5s; /* Opera */
-
+  bottom: 0;
+  right:0;
+  z-index: 9;
+  align-self: flex-end;
+  width: 30%;
+  animation: fadein 5s;
+  -moz-animation: fadein 5s;
+  -webkit-animation: fadein 5s;
+  -o-animation: fadein 5s;
 }
-@keyframes fadein {
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
-}
-@-moz-keyframes fadein { /* Firefox */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
-}
-@-webkit-keyframes fadein { /* Safari and Chrome */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
-}
-@-o-keyframes fadein { /* Opera */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity: 1;
-    }
-}
+@keyframes fadein { from { opacity:0; } to { opacity:1;}}
+@-moz-keyframes fadein { from { opacity:0; } to { opacity:1;}}
+@-webkit-keyframes fadein { from { opacity:0; } to { opacity:1;}}
+@-o-keyframes fadein { from { opacity:0; } to { opacity:1;}}
 
 img{
-       -webkit-user-select: none;
+  -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  -webkit-user-drag: none;
+    -webkit-user-drag: none;
 }
