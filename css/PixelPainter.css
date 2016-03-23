@@ -31,9 +31,19 @@ button {
   border-radius: 12px;
   background-color: #ffffff;
 }
+
 #leftContainer{
   max-width: 166px;
 }
+
+
+#leftContainer{
+
+  max-width: 166px;
+}
+
+
+
 #chosenColor{
   width: 61px;
   height: 61px;
@@ -50,6 +60,7 @@ button {
   padding-top: 10px;
   vertical-align: center;
   margin-top: 5px;
+
 }
 #clear {
 padding-top: 10px;
@@ -66,6 +77,7 @@ padding-top: 5px;
 margin-top: 5px;
 vertical-align: center;
 }
+
 .favColor{
   width: 30px;
   height: 30px;
@@ -73,6 +85,7 @@ vertical-align: center;
   background-color: white;
   display: inline-block;
 }
+
 #colorNotification {
   display: none;
   font-family: 'VT323', ;
@@ -80,14 +93,17 @@ vertical-align: center;
   padding: 5px;
   text-transform: uppercase;
 }
+
 #favoriteColors:hover #colorNotification {
 display: block;
 vertical-align: bottom;
 }
+
 #favoriteColors{
   margin-top: 21px;
   margin-left: 7px;
 }
+
 h2{
   font-family: 'VT323', font-weight: 400;
 }
