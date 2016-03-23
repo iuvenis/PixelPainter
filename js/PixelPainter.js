@@ -15,7 +15,7 @@ var pixelPainter = function () {
       colors.push(hexColor);
       hexColor = '#';
     }
-  };
+  }
 
   function colorPalette () {
     // Column Builder
@@ -41,14 +41,14 @@ var pixelPainter = function () {
     currentColor = event.target.style.backgroundColor;
     chosenColor.style.backgroundColor = currentColor;
   }
-  
+
   function erase () {
     currentColor = '#ffffff';
     chosenColor.style.backgroundColor = currentColor;
   }
-  
+
   function clear () {
-    
+
     var blocks = document.getElementsByClassName('block');
 
     for(var i = 0; i < blocks.length; i++) {
@@ -72,8 +72,8 @@ var pixelPainter = function () {
       document.getElementById('removeGridlines').appendChild(gridlineImg);
     }
     else {
-      for (var i = 0; i < blocks.length; i++) {
-        blocks[i].style.border = '1px solid black';
+      for ( var m = 0; m < blocks.length; m++) {
+        blocks[m].style.border = '1px solid black';
       }
       canvasGrid.style.border = 'none';
       document.getElementById('removeGridlines').innerHTML = 'Remove Gridlines ';
@@ -109,47 +109,62 @@ var pixelPainter = function () {
   }
 
   function mouseMove () {
-    
+
     if (change === true && event.target.className === 'block') {
       event.target.style.backgroundColor = currentColor;
     }
   }
 
+  function favoriteColor() {
+
+    for (var i = 0; i < 27; i++) {
+
+      var row = document.createElement('div');
+      row.className = 'favColor';
+
+      favoriteColors.appendChild(row);
+    }
+  }
+
+
+
+
   return {
 
-    generateColor : generateColor,
-    colorPalette : colorPalette,
+    generateColor   : generateColor,
+    colorPalette    : colorPalette,
     setRandomColors : setRandomColors,
-    colorPick : colorPick,
-    erase : erase,
-    clear: clear,
+    colorPick       : colorPick,
+    erase           : erase,
+    clear           : clear,
     removeGridlines : removeGridlines,
-    canvasMaker : canvasMaker,
-    setPick : setPick,
-    mouseUp : mouseUp,
-    mouseMove : mouseMove
-  }  
-}
+    canvasMaker     : canvasMaker,
+    setPick         : setPick,
+    mouseUp         : mouseUp,
+    mouseMove       : mouseMove,
+    favoriteColor  : favoriteColor
+  };
+};
 
 
 var canvasGrid = document.getElementById('canvasGrid');
   canvasGrid.style.backgroundColor = '#ffffff';
   canvasGrid.addEventListener('mousedown', function () {
-    pixelPainter().setPick()
+    pixelPainter().setPick();
     console.log('clicked');
   });
-  
+
   canvasGrid.addEventListener('mouseup', function () {
-    pixelPainter().mouseUp()
+    pixelPainter().mouseUp();
   });
-  
+
   canvasGrid.addEventListener('mousemove', function () {
-    pixelPainter().mouseMove()
+    pixelPainter().mouseMove();
   });
 
 var colorGrid  = document.getElementById('colorGrid');
   colorGrid.addEventListener('click', function () {
-    pixelPainter().colorPick()
+    pixelPainter().colorPick();
   });
 
 
@@ -158,16 +173,19 @@ document.getElementById('erase').addEventListener('click', function () {
 });
 
 document.getElementById('clear').addEventListener('click', function () {
-  pixelPainter().clear()
+  pixelPainter().clear();
 });
 
 document.getElementById('refreshColors').addEventListener('click', function () {
-  pixelPainter().setRandomColors()
+  pixelPainter().setRandomColors();
 });
 
 document.getElementById('removeGridlines').addEventListener('click', function () {
-  pixelPainter().removeGridlines()
+  pixelPainter().removeGridlines();
 });
 
+favoriteColors= document.getElementById('favoriteColors');
+
+pixelPainter().favoriteColor();
 pixelPainter().canvasMaker();
 pixelPainter().colorPalette();
